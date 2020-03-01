@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <title>Megan Homepage</title>
+  <!--get the CSS file...-->
+  <link href="homeCSS.css" rel="stylesheet">
+  <!--get the fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lato:400,400i,700,700i&display=swap" rel="stylesheet">
+</head>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous">
+</script>
+<!--Icons-->
+<script src="https://kit.fontawesome.com/93d4c6299a.js" crossorigin="anonymous"></script>
+<body>
+  <!--Name-->
+  <h1>Megan Anderson</h1>
+  <!--write up-->
+  <div class = "aboutMe">
+    <p class = "aboutMe">
+      I am a student attending Arizona State University studying Digital Culture (Art).<br>
+      In my free time, I like to create and share digital artworks under the name Aurora Sol.
+    </p>
+  </div>
+  <!--Speedpainting youtube video-->
+  <h2>Speedpainting Video</h2>
+  <div class = "video">
+    <iframe src="https://www.youtube.com/embed/YIJzxu_-1mc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <!--slideshow of some of my artworks-->
+  <h2>Selected Artworks</h2>
+  <div class = "slideshow">
+    <img id = "slideshow" class = "slideshow" src = "https://aurorasol.weebly.com/uploads/1/2/6/1/126159154/rafon-promob-advert-small_orig.jpeg">
+    <div class = "slideButtons">
+      <button onclick='prevPic()'><i class="fas fa-angle-double-left"></i></button>
+      <button onclick='setPic(0)'> 1 </button>
+      <button onclick='setPic(1)'> 2 </button>
+      <button onclick='setPic(2)'> 3 </button>
+      <button onclick='setPic(3)'> 4 </button>
+      <button onclick='nextPic()'><i class="fas fa-angle-double-right"></i></button>
+
+    </div>
+  </div>
+  <!--buttons to control the slideshow-->
+
+  <!--social media buttons-->
+  <h2>Follow Me</h2>
+  <div class = "socialButtons">
+    <button class = "social" onclick='window.location.href = "https://www.deviantart.com/aurora-sol";'><i class="fab fa-deviantart"></i></button>
+    <button class = "social" onclick='window.location.href = "https://aurorasol.tumblr.com/";'><i class="fab fa-tumblr"></i></button>
+    <button class = "social" onclick='window.location.href = "https://www.instagram.com/aurorasol_17/";'><i class="fab fa-instagram"></i></button>
+    <button class = "social" onclick='window.location.href = "https://twitter.com/aurorasol_17";'><i class="fab fa-twitter"></i></button>
+    <button class = "social" onclick='window.location.href = "https://www.twitch.tv/aurorasol17";'><i class="fab fa-twitch"></i></button>
+    <button class = "social" onclick='window.location.href = "https://mixer.com/AuroraSol";'><i class="fab fa-mixer"></i></button>
+    <button class = "social" onclick='window.location.href = "https://www.youtube.com/channel/UCfIFbfeR13yleXJfMewiHbg/featured";'><i class="fab fa-youtube"></i></button>
+  </div>
+  <div class = "spacer">
+  </div>
+
+</body>
+<script>
+//image object
+var myImage = document.getElementById("slideshow");
+var currentIndex = 0;
+//and array of img urls
+var imgs = [
+  "https://aurorasol.weebly.com/uploads/1/2/6/1/126159154/rafon-promob-advert-small_orig.jpeg",
+  "https://aurorasol.weebly.com/uploads/1/2/6/1/126159154/ni-v2-small_orig.jpg",
+  "https://aurorasol.weebly.com/uploads/1/2/6/1/126159154/aurorasol-boop-small_orig.jpg",
+  "https://aurorasol.weebly.com/uploads/1/2/6/1/126159154/queensoftimeandcosmossmaller_orig.png"
+];//end of imgs[]
+
+//set the images for the slideshow here
+function setPic(index){
+  if(index < imgs.length){
+    myImage.setAttribute("src", imgs[index]);
+    currentIndex = index;
+  }
+  else {
+    alert("ERROR: array index out of range");
+  }
+}//end of setPic
+
+function prevPic(){
+  if(currentIndex - 1 > -1){
+    myImage.setAttribute("src", imgs[currentIndex - 1]);
+    currentIndex -= 1;
+  }
+  else if(currentIndex == 0){
+    myImage.setAttribute("src", imgs[imgs.length]);
+    currentIndex = imgs.length;
+  }
+  else{
+    alert("ERROR: array index out of range");
+  }
+}//end of prevPic
+
+function nextPic(){
+  if(currentIndex + 1 < imgs.length + 1){
+    myImage.setAttribute("src", imgs[currentIndex + 1]);
+    currentIndex += 1;
+  }
+  else if(currentIndex == imgs.length){
+    myImage.setAttribute("src", imgs[0]);
+    currentIndex = 0;
+  }
+  else{
+    alert("ERROR: array index out of range");
+  }
+}//end of nextPic
+
+</script>
+</html>

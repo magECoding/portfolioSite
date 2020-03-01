@@ -1,0 +1,102 @@
+body{
+  background-color: #ffffff;
+  text-align: center;
+}
+h1{
+  margin: auto;
+  padding: 25px;
+  text-align: center;
+  font-family: 'Dancing Script', serif;
+  font-weight: 700;
+  font-size: 74px;
+  color: #ffffff;
+  background-color: #4d0099;
+}
+h2{
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Lato', serif;
+  font-weight: 700;
+  font-size: 52px;
+  color: #ffffff;
+  background-color: #7300e6;
+}
+div.spacer{
+  padding: 40px;
+}
+div.aboutMe{
+  positon: relative;
+  padding: 50px;
+}
+p.aboutMe{
+  font-family: 'Lato', serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #330066;
+}
+div.video{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  background-color: #d9b3ff;
+}
+iframe{
+  display: block;
+  width: 1120px;
+  height: 630px;
+  margin: auto;
+}
+img.slideshow{
+  display: block;
+  height: 800px;
+  margin: auto;
+}
+div.slideshow{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  outline-width: 10px;
+}
+div.slideButtons{
+  margin: auto;
+  padding: 10px;
+}
+button{
+  transition-duration: 0.5s;
+  background-color: #d9b3ff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: 'Lato', serif;
+  font-weight: 700;
+  font-size: 12;
+  color: #330066;
+  display: inline-block;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #4d0099;
+  color: white;
+}
+div.socialButtons{
+  margin: auto;
+  padding: 10px;
+}
+button.social{
+  transition-duration: 0.5s;
+  background-color: #d9b3ff;
+  border: none;
+  padding: 20px 30px;
+  text-align: center;
+  color: #330066;
+  display: inline-block;
+  cursor: pointer;
+}
+button.social:hover{
+  background-color: #4d0099;
+  color: white;
+}
+i.fab{
+  font-size: 24px;
+}
